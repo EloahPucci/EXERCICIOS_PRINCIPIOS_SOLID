@@ -1,16 +1,21 @@
 package srp;
 
-public class Veiculo extends Reabastecimento{
+public class Veiculo {
 
-	private final int capacidadeTanqueCombustivel;
-	private int quantidadeCombustivel;
+    private final int capacidadeTanqueCombustivel;
+    private int quantidadeCombustivel;
 
-	public Veiculo(int capacidadeTanque) {
-		this.capacidadeTanqueCombustivel = capacidadeTanque;
-		quantidadeCombustivel = capacidadeTanque;
-	}
+    public Veiculo(int capacidadeTanque) {
+        this.capacidadeTanqueCombustivel = capacidadeTanque;
+        quantidadeCombustivel = capacidadeTanque;
+    }
 
-	public int getQuantidadeCombustivel() {
+    // isto é responsabilidade do veiculo?
+    public void reabastecimento(){
+        quantidadeCombustivel = capacidadeTanqueCombustivel;
+    }
+
+    public int getQuantidadeCombustivel() {
 		return quantidadeCombustivel;
 	}
 
@@ -22,8 +27,7 @@ public class Veiculo extends Reabastecimento{
 		return capacidadeTanqueCombustivel;
 	}
 
-	public void acelerar() {
-		quantidadeCombustivel--;
-	}
-
+    public void acelerar() {
+        quantidadeCombustivel--;
+    }
 }
